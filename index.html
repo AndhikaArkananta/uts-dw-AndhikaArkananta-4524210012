@@ -4,18 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UTS DW</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&family=Momo+Trust+Sans:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-
+        <h1>Kartu Mahasiswa</h1>
+        <p>Masukkan data di bawah untuk melihat kartu mahasiswa secara real-time.</p>
+        <br>
     </header>
     <main>
-        <form>
+        <form id="form_mhs">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" name="nama_mhs" id="nama_mhs" size="50" required>
             
+            <label for="npm_mhs">Nomor Pokok Mahasiswa</label>
+            <input type="text" name="npm_mhs" id="npm_mhs" size="10" required>
+
+            <label for="fakultas">Fakultas</label>
+            <select name="fakultas" id="fakultas">
+                <option value="">-- Pilih Fakultas --</option>
+                <option value="Teknik">Teknik</option>
+                <option value="Farmasi">Farmasi</option>
+                <option value="Ekonomi dan Bisnis">Ekonomi dan Bisnis</option>
+                <option value="Hukum">Hukum</option>
+                <option value="Ilmu Komunikasi">Ilmu Komunikasi</option>
+                <option value="Psikologi">Psikologi</option>
+                <option value="Pariwisata">Pariwisata</option>
+            </select>
         </form>
+
+        <section id="areaPreview">
+            <article class="kartu_mhs">
+                <div class="header_kartu">
+                    <h2>Kartu Mahasiswa</h2>
+                </div>
+                <div class="data_kartu">
+                    <p>Nama    : <span id="preview-Nama">Nama Mahasiswa</span></p>
+                    <p>NPM     : <span id="preview-Npm">Nomor Pokok Mahasiswa</span></p>
+                    <p>Fakultas: <span id="preview-Fakultas">Fakultas</span></p>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
-
+        <p>UTS Desain Web - Andhika Arkananta</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
